@@ -1,0 +1,34 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxm="http://schemas.devexpress.com/winfx/2008/xaml/map" 
+        x:Class="MapBubble.MainWindow"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+
+        <dxm:MapControl>
+            <dxm:VectorLayer ToolTipEnabled="True" 
+                             ToolTipPattern="{}Argument: %A%&#13;&#10;Value: %V%">
+                <dxm:VectorLayer.Colorizer>
+                    <dxm:KeyColorColorizer>
+                        <dxm:KeyColorColorizer.ItemKeyProvider>
+                            <dxm:IdItemKeyProvider/>
+                        </dxm:KeyColorColorizer.ItemKeyProvider>
+                        <dxm:KeyColorColorizer.Colors>
+                            <Color A="255" R="255" G="128"/>
+                            <Color A="255" R="100" G="100" B="100"/>
+                        </dxm:KeyColorColorizer.Colors>
+                    </dxm:KeyColorColorizer>
+                </dxm:VectorLayer.Colorizer>
+                <!--region #ChartItems-->
+                <dxm:MapItemStorage>
+                    <dxm:MapBubble Location="-30,-30" Size="20" 
+                                   ItemId="A" Value="100"/>
+                    <dxm:MapBubble Location="30,30" Size="60"
+                                   ItemId="B" Value="150"/>
+                </dxm:MapItemStorage>
+                <!--endregion #ChartItems-->
+            </dxm:VectorLayer>
+        </dxm:MapControl>
+    </Grid>
+</Window>
