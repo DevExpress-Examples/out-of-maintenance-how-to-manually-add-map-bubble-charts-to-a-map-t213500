@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* **[MainWindow.xaml](./CS/MapBubble/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/MapBubble/MainWindow.xaml))**
+<!-- default file list end -->
 # How to manually add map bubble charts to a map
 
 
